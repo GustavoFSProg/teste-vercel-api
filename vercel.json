@@ -2,11 +2,17 @@
   "name": "teste",
   "version": 2,
   "public": true,
+  "builds": [
+    {
+      "src": "dist/index.js",
+      "use": "@vercel/node"
+    }
+  ],
  
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "src/index.js"
+      "dest": "dist/index.js"
     }
   ]
 }
